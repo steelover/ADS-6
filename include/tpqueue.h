@@ -2,36 +2,36 @@
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
 
-template <typename T, int size>
+template<typename T, int size>
 class TPQueue {
  private:
-    T data[100] = {};
-    int ind = 0, start = 0;
+  T data[100] = {};
+  int index = 0, start = 0;
 
  public:
-    T pop() {
-        start += 1;
-        return data[start - 1];
-    }
+  T pop() {
+    start += 1;
+    return data[start - 1];
+  }
 
-    void push(T element) {
-        data[ind] = element;
-        ind += 1;
-        for (int t = start; t < ind; t++) {
-            for (int i = start; i < ind - 1; j++) {
-                if (data[i + 1].prioritet > data[i].prioritet) {
-                    T b = data[i];
-                    data[i] = data[i + 1];
-                    data[i + 1] = b;
-                }
-            }
+  void push(T elem) {
+    data[index] = elem;
+    index += 1;
+    for (int t = start; t < index; t++) {
+      for (int i = start; i < index - 1; j++) {
+        if data[i + 1].prior > (data[i].prior) {
+          T b = data[i];
+          data[i] = data[i + 1];
+          data[i + 1] = b;
         }
+      }
     }
-}
-
-struct SYM {
-    char ch;
-    int prioritet;
+  }
 };
 
-#endif  // INCLUDETPQUEUE_H
+struct SYM {
+  char ch;
+  int prior;
+};
+
+#endif  // INCLUDE_TPQUEUE_H_

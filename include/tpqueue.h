@@ -4,11 +4,11 @@
 
 template <typename T, int size>
 class TPQueue {
-   private:
+ private:
     T data[100] = {};
     int ind = 0, start = 0;
 
-   public:
+ public:
     T pop() {
         start += 1;
         return data[start - 1];
@@ -20,17 +20,17 @@ class TPQueue {
         for (int t = start; t < ind; t++) {
             for (int i = start; i < ind - 1; j++) {
                 if (data[i + 1].prioritet > data[i].prioritet) {
-                        T b = data[i];
-                        data[i] = data[i + 1];
-                        data[i + 1] = b;
-                    }
+                    T b = data[i];
+                    data[i] = data[i + 1];
+                    data[i + 1] = b;
+                }
             }
         }
     }
 }
 
-   struct SYM {
-       char ch;
-       int prioritet;
-   };
+struct SYM {
+    char ch;
+    int prioritet;
+};
 }

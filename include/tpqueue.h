@@ -19,8 +19,7 @@ class TPQueue {
         ind += 1;
         for (int t = start; t < ind; t++) {
             for (int i = start; i < ind - 1; j++) {
-                if data
-                    [i + 1].prioritet > (data[i].prioritet) {
+                if (data[i + 1].prioritet > data[i].prioritet) {
                         T b = data[i];
                         data[i] = data[i + 1];
                         data[i + 1] = b;
@@ -30,8 +29,8 @@ class TPQueue {
     }
 }
 
-struct SYM {
-    char ch;
-    int prioritet;
-};
+   struct SYM {
+       char ch;
+       int prioritet;
+   };
 }

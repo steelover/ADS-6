@@ -33,4 +33,5 @@ struct SYM {
     char ch;
     int prioritet;
 };
-}
+
+#endif  // INCLUDETPQUEUE_H

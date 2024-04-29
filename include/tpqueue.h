@@ -2,7 +2,7 @@
 #ifndef INCLUDE_TPQUEUE_H_
 #define INCLUDE_TPQUEUE_H_
 
-template <typename T, int size>
+template<typename T, int size>
 class TPQueue {
  private:
     T data[100] = {};
@@ -27,10 +27,11 @@ class TPQueue {
             }
         }
     }
-}
+};
 
 struct SYM {
-    char ch;
-    int prioritet;
+  char ch;
+  int prior;
 };
-}
+
+#endif  // INCLUDE_TPQUEUE_H_
